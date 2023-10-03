@@ -20,13 +20,13 @@ public class Application {
 //    public static List<Integer> getBallStrike(List<Integer> computerNum, List<Integer> userNum) {
 //
 //    }
-//    public static List<Integer> getUserNum() {
-//        String input = Console.readLine();
-//        List<Integer> userNum = input.chars()
-//                .mapToObj(Character::getNumericValue)
-//                .collect(Collectors.toList());
-//        return userNum;
-//    }
+    public static List<Integer> getUserNum() {
+        String input = Console.readLine();
+        List<Integer> userNum = input.chars()
+                .mapToObj(Character::getNumericValue)
+                .collect(Collectors.toList());
+        return userNum;
+    }
     public static List<Integer> getComputerNum() {
         List<Integer> computerNum = new ArrayList<>();
         while (computerNum.size() < 3) {
