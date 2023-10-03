@@ -18,6 +18,12 @@ public class Application {
         Map<String, Integer> ballStrikeMap = getBallStrikeMap(getComputerNum(), getUserNum());
 //        System.out.println(ballStrikeMap);
     }
+    public static boolean checkAnswer(Map<String, Integer> ballStrikeMap) {
+        if (ballStrikeMap.get("strike") == 3) {
+            return true;
+        }
+        return false;
+    }
 
     public static Map<String, Integer> getBallStrikeMap(List<Integer> computerNum, List<Integer> userNum) {
         Map<String, Integer> ballStrikeMap = new HashMap<>();
