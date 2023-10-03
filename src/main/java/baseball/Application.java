@@ -17,7 +17,30 @@ public class Application {
         System.out.println("숫자 야구 게임을 시작합니다.");
         Map<String, Integer> ballStrikeMap = getBallStrikeMap(getComputerNum(), getUserNum());
 //        System.out.println(ballStrikeMap);
+        printBallStrike(ballStrikeMap);
+//        if (checkAnswer(ballStrikeMap)) {
+//            answerAction();
+//        }
+//        else {
+//            notAnswerAction();
+//        }
     }
+    public static void printBallStrike(Map<String, Integer> ballStrikeMap) {
+        int ballCount = ballStrikeMap.get("ball");
+        int strikeCount = ballStrikeMap.get("strike");
+        if (ballCount != 0) {
+            System.out.print(ballCount+"볼 ");
+        }
+        if (strikeCount != 0) {
+            System.out.println(strikeCount+"스트라이크");
+        }
+    }
+//    public void notAnswerAction() {
+//
+//    }
+//    public void answerAction() {
+//       System.out.println();
+//    }
     public static boolean checkAnswer(Map<String, Integer> ballStrikeMap) {
         if (ballStrikeMap.get("strike") == 3) {
             return true;
